@@ -5,6 +5,7 @@ import { fetchDashboard } from "../services/transactions";
 import { useToast } from "../components/Toast";
 import { Card } from "../components/Card";
 import { Button } from "../components/Button";
+import AIChat from "../components/AIChat";
 
 function StatusBadge({ status }) {
   const config = {
@@ -292,6 +293,8 @@ export default function SellerDashboard() {
             </div>
           )}
         </div>
+
+        <AIChat data={data} loading={loading} />
       </div>
     </div>
   );
