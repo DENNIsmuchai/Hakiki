@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #FFFEF7;
+  color: #1B1808;
+  font-family: "Manrope", -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-image: radial-gradient(circle at 1px 1px, rgba(27, 24, 8, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+::selection {
+  background: #FFC229;
+  color: #1B1808;
+}
+
+*:focus-visible {
+  outline: 3px solid #E29200;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Smooth fade-in for page transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Number counter animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-count {
+  animation: countUp 0.5s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFEF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B1808;
+  border-radius: 4px;
+  border: 2px solid #FFFEF7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6B6560;
+}
